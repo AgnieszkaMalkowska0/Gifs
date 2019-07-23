@@ -43,15 +43,11 @@
             </div>
         </div>
     </div>
-    <div class="gifs container" th:each="gif: ${gifs}">
+    <div class="gifs container">
         <div class="row">
-            <img th:src="${get.Url}">
-<!--           <h1><img src="gifs/android-explosion.gif" alt="Android"></h1>
-           <h1><img src="gifs/ben-and-mike.gif" alt="Ben"></h1>
-           <h1><img src="gifs/book-dominos.gif" alt="Book"></h1>
-           <h1><img src="gifs/compiler-bot.gif" alt="Bot"></h1>
-           <h1><img src="gifs/cowboy-coder.gif" alt="Cowboy"></h1>
-           <h1><img src="gifs/infinite-andrew.gif" alt="Andrew"></h1>-->
+            <div th:each="gif : ${gifs}" class="col s12 l4">
+                <img th:src="${gif.getUrl()}">
+            </div>
         </div>
     </div>
 
