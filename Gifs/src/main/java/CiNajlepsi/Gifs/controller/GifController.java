@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * Created by Agnieszka on 23.07.2019.
  */
+//Karol Commit bla bla bla
 @Controller
 public class GifController {
 
