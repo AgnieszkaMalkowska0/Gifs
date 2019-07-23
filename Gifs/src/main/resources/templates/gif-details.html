@@ -69,6 +69,12 @@
             </div>
         </div>
     </div>
+    <div class="gifs container" th:each="gif: ${gifs}">
+        <div class="row col s9">
+            <img th:src="${gif.getUrl()}">
+
+        </div>
+    </div>
 
 <script th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
 <script th:src="@{/vendor/materialize/js/materialize.js}"></script>
