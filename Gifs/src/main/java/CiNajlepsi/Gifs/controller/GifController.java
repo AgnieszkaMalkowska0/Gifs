@@ -15,4 +15,11 @@ public class GifController {
 
         return "home";
     }
+
+
+    @GetMapping("/categories")
+    public String categories() {
+
+        return "categories";
+    }
 }
