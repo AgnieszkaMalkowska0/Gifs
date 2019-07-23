@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Agnieszka on 23.07.2019.
+ * Created by CiNajlepsi Company on 23.07.2019.
  */
 public class Category {
 

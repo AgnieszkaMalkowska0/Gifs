@@ -7,7 +7,7 @@ import CiNajlepsi.Gifs.model.Category;
 
 
 /**
- * Created by Agnieszka on 23.07.2019.
+ * Created by CiNajlepsi Company on 23.07.2019.
  */
 @Controller
 public class CategoryController {

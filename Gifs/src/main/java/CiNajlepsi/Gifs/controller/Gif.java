@@ -1,7 +1,5 @@
 package CiNajlepsi.Gifs.controller;
 
-
-
 public class Gif {
     private String name;
 
