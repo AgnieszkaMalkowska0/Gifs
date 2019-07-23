@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FavoriteController {
     @GetMapping("/favorites")
     public String index(ModelMap map) {
-        map.put("favorites", Gif.getFavorites());
+        map.put("gifs", Gif.getFavorites());
         return "favorites";
     }
 }
