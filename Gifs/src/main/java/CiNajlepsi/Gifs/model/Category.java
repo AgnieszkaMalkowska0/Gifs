@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Category {
 
-    private Integer id;
+    private String id;
 
     private String name;
 
@@ -16,20 +16,20 @@ public class Category {
 public static List<Category> getCategories() {
 
     List<Category> categories = new ArrayList<>();
-    categories.add(new Category(1, "Programing"));
-    categories.add(new Category(2, "Bot"));
-    categories.add(new Category(3, "Funny"));
-    categories.add(new Category(4, "Science"));
-    categories.add(new Category(5, "Others"));
+    categories.add(new Category("programming", "Programing"));
+    categories.add(new Category("bot", "Bot"));
+    categories.add(new Category("funny", "Funny"));
+    categories.add(new Category("science", "Science"));
+    categories.add(new Category("others", "Others"));
     return categories;
 
 }
-    public Category(Integer id, String name) {
+    public Category(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
@@ -37,7 +37,7 @@ public static List<Category> getCategories() {
         return name;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
