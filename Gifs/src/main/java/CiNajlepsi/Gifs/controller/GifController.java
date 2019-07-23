@@ -1,5 +1,7 @@
 package CiNajlepsi.Gifs.controller;
 
+import CiNajlepsi.Gifs.repository.GifRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,11 +13,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class GifController {
 
+    @Autowired
+    private GifRepository gifRepository;
+
     @GetMapping("/")
     public String home(ModelMap map) {
-        map.put("gifs", Gif.getGifs());
+        map.put("gifs", gifRepository.getGifs());
         return "home";
     }
+
+    @GetMapping("/favorites")
+    public String favorites(ModelMap map) {
+        map.put("gifs", gifRepository.getFavorites());
+        return "favorites";
+    }
+
 }
 
 /*
