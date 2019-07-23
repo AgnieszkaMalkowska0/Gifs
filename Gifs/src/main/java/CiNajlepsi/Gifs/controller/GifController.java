@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class GifController {
 
     @GetMapping("/")
+
     public String home(ModelMap map) {
         map.put("gifs", Gif.getGifs());
+
         return "home";
     }
 }
@@ -23,6 +25,7 @@ public class GifController {
     public String categories(){
         return "categories";
     }
+
 
 }
 */
