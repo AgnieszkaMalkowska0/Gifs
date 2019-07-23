@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class GifController {
 
     @GetMapping("/")
-    public String home(ModelMap map) {
-        map.put("gifs",Gif.get)
+   public String home() {
+
         return "home";
     }
 
