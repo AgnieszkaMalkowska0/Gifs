@@ -30,11 +30,4 @@ public class GifController {
 
 }
 
-/*
-    @GetMapping("/categories")
-    public String categories(){
-        return "categories";
-    }
 
-}
-*/

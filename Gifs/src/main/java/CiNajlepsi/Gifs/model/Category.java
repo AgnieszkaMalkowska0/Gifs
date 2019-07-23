@@ -16,9 +16,11 @@ public class Category {
 public static List<Category> getCategories() {
 
     List<Category> categories = new ArrayList<>();
-    categories.add(new Category(1, "programming"));
-    categories.add(new Category(2, "bot"));
-    categories.add(new Category(3, "others"));
+    categories.add(new Category(1, "Programing"));
+    categories.add(new Category(2, "Bot"));
+    categories.add(new Category(3, "Funny"));
+    categories.add(new Category(4, "Science"));
+    categories.add(new Category(5, "Others"));
     return categories;
 
 }
