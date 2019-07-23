@@ -12,7 +12,10 @@ public class GifController {
 
     @GetMapping("/")
     public String home() {
-
         return "home";
+    }
+    @GetMapping("/categories")
+    public String categories() {
+        return "categories";
     }
 }
