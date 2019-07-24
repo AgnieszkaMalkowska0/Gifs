@@ -16,4 +16,5 @@ public class CategorySimpleRepository implements CategoryRepository {
         return Category.getCategories().stream().filter(category -> category.getId()==id).collect(Collectors.toList()).get(0);
 
     }
+
 }

@@ -32,4 +32,8 @@ public  class GifSimpleRepository implements GifRepository{
         return getGifs().stream().filter(gif -> gif.getCategoryId()==id).collect(Collectors.toList());
     }
 
+    @Override
+    public Gif findByName (String name){
+        return getGifs().stream().filter(gif -> gif.getName().equals(name)).collect(Collectors.toList()).get(0);
+    }
 }
