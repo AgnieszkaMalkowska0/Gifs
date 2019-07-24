@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by CiNajlepsi Company on 23.07.2019.
@@ -26,6 +28,12 @@ public class GifController {
     public String favorites(ModelMap map) {
         map.put("gifs", gifRepository.getFavorites());
         return "favorites";
+    }
+    @ResponseBody
+    @GetMapping("/categorie/{id}")
+    public String categorie(ModelMap map, @PathVariable String id) {
+        map.put("gifs", gifRepository.getCategorie());
+        return "categorie" + id;
     }
 
 }

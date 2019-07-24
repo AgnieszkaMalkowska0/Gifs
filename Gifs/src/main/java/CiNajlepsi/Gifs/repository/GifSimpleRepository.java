@@ -1,5 +1,6 @@
 package CiNajlepsi.Gifs.repository;
 
+import CiNajlepsi.Gifs.model.CategoriesEnum;
 import CiNajlepsi.Gifs.model.Gif;
 import org.springframework.stereotype.Component;
 
@@ -11,19 +12,20 @@ import java.util.stream.Collectors;
 public class GifSimpleRepository implements GifRepository {
     @Override
     public List<Gif> getGifs() {
+        //CategoriesEnum categoriesEnum = CategoriesEnum.BOT;
         List<Gif> gifs = new ArrayList<>();
-        gifs.add(new Gif("android-explosion"));
-        gifs.add(new Gif("ben-and-mike"));
-        gifs.add(new Gif("book-dominos"));
-        gifs.add(new Gif("compiler-bot"));
-        gifs.add(new Gif("cowboy-coder"));
-        gifs.add(new Gif("infinite-andrew"));
-        gifs.add(new Gif("0e9b8ad60c9e93bd35fc86936fe9ad6c"));
-        gifs.add(new Gif("0fcf654ee673329198a8e7c3d850edce"));
+        gifs.add(new Gif("android-explosion", CategoriesEnum.BOT));
+        gifs.add(new Gif("ben-and-mike", CategoriesEnum.FUNNY));
+        gifs.add(new Gif("book-dominos", CategoriesEnum.BOT));
+        gifs.add(new Gif("compiler-bot",CategoriesEnum.BOT));
+        gifs.add(new Gif("cowboy-coder", CategoriesEnum.BOT));
+        gifs.add(new Gif("infinite-andrew", CategoriesEnum.BOT));
+        gifs.add(new Gif("0e9b8ad60c9e93bd35fc86936fe9ad6c",CategoriesEnum.OTHER));
+        gifs.add(new Gif("0fcf654ee673329198a8e7c3d850edce", CategoriesEnum.SCIENCE));
         gifs.add(new Gif("1d6c2e9832bb4098fbaf41bc0ee1c631"));
         gifs.add(new Gif("1f58edaf7fe6269cb2da7bb631465eb6"));
         gifs.add(new Gif("2_be72d196d892"));
-        gifs.add(new Gif("8dbb99544d356c0fd28a75b3051d751d",true));
+        gifs.add(new Gif("8dbb99544d356c0fd28a75b3051d751d",true,CategoriesEnum.PROGRAMMING));
         gifs.add(new Gif("41a550b04035d34532bab108521908a7"));
         gifs.add(new Gif("107e1907c93e08b63c3c2a13983375e7",true));
         gifs.add(new Gif("567e8d486b0b831e0f659760109dff38"));
@@ -45,7 +47,7 @@ public class GifSimpleRepository implements GifRepository {
         gifs.add(new Gif("Hipersześcian"));
         gifs.add(new Gif("kaczka"));
         gifs.add(new Gif("mtzcN"));
-        gifs.add(new Gif("Real Madryt"));
+        gifs.add(new Gif("Real Madryt",CategoriesEnum.FUNNY));
         gifs.add(new Gif("santa_1024x678"));
         gifs.add(new Gif("versus"));
         return gifs;
@@ -55,5 +57,12 @@ public class GifSimpleRepository implements GifRepository {
     public List<Gif> getFavorites() {
         return getGifs().stream().filter(gif -> gif.getFavorite()).
                 collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Gif> getCategorie() {
+        return  null;
+                //getGifs().stream().filter(gif -> gif.getCategorie()).
+                //collect(Collectors.toList());
     }
 }
