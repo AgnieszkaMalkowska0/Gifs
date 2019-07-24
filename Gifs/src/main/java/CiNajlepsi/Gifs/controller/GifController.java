@@ -1,5 +1,6 @@
 package CiNajlepsi.Gifs.controller;
 
+import CiNajlepsi.Gifs.model.CategoriesEnum;
 import CiNajlepsi.Gifs.repository.GifRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,9 +32,9 @@ public class GifController {
     }
     @ResponseBody
     @GetMapping("/categorie/{id}")
-    public String categorie(ModelMap map, @PathVariable String id) {
-        map.put("gifs", gifRepository.getCategorie());
-        return "categorie" + id;
+    public String show (@PathVariable String id, ModelMap map) {
+        map.put("gifs", gifRepository.getCategorie(CategoriesEnum.valueOf(id)));
+        return "categorie/" + id;
     }
 
 }

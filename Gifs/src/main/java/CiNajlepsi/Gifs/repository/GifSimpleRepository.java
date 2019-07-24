@@ -55,14 +55,14 @@ public class GifSimpleRepository implements GifRepository {
 
     @Override
     public List<Gif> getFavorites() {
-        return getGifs().stream().filter(gif -> gif.getFavorite()).
+        return
+                getGifs().stream().filter(gif -> gif.getFavorite()).
                 collect(Collectors.toList());
     }
 
     @Override
-    public List<Gif> getCategorie() {
-        return  null;
-                //getGifs().stream().filter(gif -> gif.getCategorie()).
-                //collect(Collectors.toList());
+    public List<Gif> getCategorie(CategoriesEnum id) {
+        return  getGifs().stream().filter(gif -> gif.getCategoriesEnum().equals(id)).collect(Collectors.toList());
+
     }
 }
