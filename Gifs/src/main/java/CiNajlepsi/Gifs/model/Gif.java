@@ -1,4 +1,4 @@
-package CiNajlepsi.Gifs.controller;
+package CiNajlepsi.Gifs.model;
 
 public class Gif {
     private String name;

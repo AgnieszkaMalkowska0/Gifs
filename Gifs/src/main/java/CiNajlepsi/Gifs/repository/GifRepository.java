@@ -1,6 +1,6 @@
 package CiNajlepsi.Gifs.repository;
 
-import CiNajlepsi.Gifs.controller.Gif;
+import CiNajlepsi.Gifs.model.Gif;
 
 import java.util.List;
 
