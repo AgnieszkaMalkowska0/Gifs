@@ -22,7 +22,7 @@ public class Gif {
     }
 
     public String getUrl() {
-        return "gifs/" + name + ".gif";
+        return "/gifs/" + name + ".gif";
     }
     public String getName(){
         return name;

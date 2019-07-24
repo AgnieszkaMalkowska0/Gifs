@@ -23,9 +23,7 @@ public class Category {
         List<Category> categories = new ArrayList<>();
         categories.add(new Category(1, "Programing"));
         categories.add(new Category(2, "Bot"));
-        categories.add(new Category(3, "Funny"));
-        categories.add(new Category(4, "Science"));
-        categories.add(new Category(5, "Others"));
+        categories.add(new Category(3, "Others"));
         return categories;
 
     }
