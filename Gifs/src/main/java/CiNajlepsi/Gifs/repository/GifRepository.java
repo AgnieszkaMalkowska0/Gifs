@@ -7,4 +7,5 @@ import java.util.List;
 public interface GifRepository {
     List<Gif> getGifs();
     List<Gif> getFavorites();
+    List<Gif> getGifsByCategoryId(int id);
 }
