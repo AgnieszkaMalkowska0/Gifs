@@ -8,37 +8,36 @@ import java.util.List;
  */
 public class Category {
 
-    private String id;
+    private int id;
 
     private String name;
 
-
-public static List<Category> getCategories() {
-
-    List<Category> categories = new ArrayList<>();
-    categories.add(new Category("programming", "Programing"));
-    categories.add(new Category("bot", "Bot"));
-    categories.add(new Category("funny", "Funny"));
-    categories.add(new Category("science", "Science"));
-    categories.add(new Category("others", "Others"));
-    return categories;
-
-}
-    public Category(String id, String name) {
+    public Category(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public String getId() {
+
+    public static List<Category> getCategories() {
+
+        List<Category> categories = new ArrayList<>();
+        categories.add(new Category(1, "Programing"));
+        categories.add(new Category(2, "Bot"));
+        categories.add(new Category(3, "Others"));
+        return categories;
+
+    }
+
+    public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public void setName(String name) {
